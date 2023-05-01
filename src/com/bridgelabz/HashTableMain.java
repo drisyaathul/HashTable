@@ -9,8 +9,16 @@ public class HashTableMain {
 
         for (String word : arrayWords) {
 //            System.out.println(word.hashCode());     //to find hashCode of each word;
-            int index = hashTable.getIndex(word);     //to find index of each word;
-            System.out.println(word + " => " +word.hashCode()+ " => " +index);
+//            int index = hashTable.getIndex(word);     //to find index of each word;
+//            System.out.println(word + " => " +word.hashCode()+ " => " +index);
+            Integer currentFrequency = hashTable.get(word);
+            if (currentFrequency == null)
+                currentFrequency = 1;
+            else
+                currentFrequency++;
+
+            hashTable.addOrUpdate(word,currentFrequency);
         }
+        System.out.println(hashTable);
     }
 }
