@@ -15,11 +15,4 @@ public class HashNode<K,V> {
         this.key = key;
         this.value = value;
     }
-    public String toString() {
-        StringBuilder nodeString = new StringBuilder();
-        nodeString.append("Node: " + " K = ").append(key).append(", V = ").append(value).append("\n");
-        if (next != null)
-            nodeString.append(" , ").append(next);
-        return nodeString.toString();
-    }
 }

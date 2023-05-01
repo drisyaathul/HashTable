@@ -84,8 +84,4 @@ public class HashLinkedList <K,V> {
         tail = temp;
         return popLastData;
     }
-    @Override
-    public String toString() {
-        return " \n{" + head + "}";
-    }
 }
