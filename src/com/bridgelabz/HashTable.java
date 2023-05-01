@@ -77,4 +77,12 @@ public class HashTable <K,V> {
                 "bucketArray=" + bucketArray +
                 '}';
     }
+
+    public boolean remove(K key) {
+
+        int index = getIndex(key);
+        HashLinkedList<K,V> hashLinkedList = bucketArray.get(index);
+        hashLinkedList.delete(key);
+        return false;
+    }
 }
