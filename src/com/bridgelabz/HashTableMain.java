@@ -3,9 +3,9 @@ package com.bridgelabz;
 public class HashTableMain {
     public static void main(String[] args) {
 
-        String sentence = "To be or not to be";
-        String[] arrayWords = sentence.split(" ");      //split based on Sentence;
-        HashTable<String, Integer> hashTable = new HashTable<>(3);
+        String paraGraph = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+        String[] arrayWords = paraGraph.split(" ");      //split based on Paragraph;
+        HashTable<String, Integer> hashTable = new HashTable<>(6);
 
         for (String word : arrayWords) {
 //            System.out.print(words + " => ");

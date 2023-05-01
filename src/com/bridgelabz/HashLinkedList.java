@@ -5,21 +5,6 @@ public class HashLinkedList <K,V> {
     HashNode<K,V> head;
     HashNode<K,V> tail;
 
-    public void push(K key, V value) {
-        /*
-         * New Node is created in the Linked list.so the head and tail is new node.
-         * if head is not equal to null, then newNode.next will be head.
-         * And head is New node.
-         */
-        HashNode<K,V> newNode = new HashNode<>(key,value);
-        if (head == null) {
-            head = newNode;
-            tail = newNode;
-        } else {
-            newNode.next = head;
-            head = newNode;
-        }
-    }
     public void append(K key, V value) {
         /*
          * New Node is created in the Linked list.so the head and tail is new node.
@@ -58,31 +43,6 @@ public class HashLinkedList <K,V> {
             temp = temp.next;
         }
         System.out.println();
-    }
-    public HashNode<K,V> pop() {
-            /*
-              Deleting the first Element
-            */
-        if (head == null)
-            return null;
-        HashNode<K,V> popData = head;  //first element
-        head = head.next;
-        return popData;
-    }
-    public HashNode<K,V> popLast() {
-         /*
-           Deleting the Last Element
-         */
-        if (head == null)
-            return null;
-        HashNode<K,V> popLastData = tail;  //last element
-        HashNode<K,V> temp = head;
-        while (temp.next != tail) {
-            temp = temp.next;      //Second last element is converting to null using while loop
-        }
-        temp.next = null;
-        tail = temp;
-        return popLastData;
     }
     @Override
     public String toString() {

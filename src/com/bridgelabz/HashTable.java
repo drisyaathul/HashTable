@@ -12,11 +12,9 @@ public class HashTable <K,V> {
      /*
         Array List size increases at run-time, so it is called dynamic array
      */
-
     public HashTable() {
 
     }
-
     public HashTable(int bucketSize) {
         /*
         parameter constructor
@@ -26,7 +24,6 @@ public class HashTable <K,V> {
             bucketArray.add(i, null);
         }
     }
-
     public int getIndex(K key) {
         /*
         //h(k) = hashcode of k % m;
@@ -34,7 +31,6 @@ public class HashTable <K,V> {
         int index = Math.abs(key.hashCode()) % bucketSize;
         return index;
     }
-
     public void addOrUpdate(K key, V value) {
         /*
         Creating new linkList
@@ -57,11 +53,11 @@ public class HashTable <K,V> {
 
         }
     }
-
     public V get(K key) {
-
+        /*
+        to know the frequency of the word
+         */
         int index = getIndex(key);
-        //to know the frequency of the word
         HashLinkedList<K,V> hashLinkedList = bucketArray.get(index);
         if (hashLinkedList == null) {
             return null;
