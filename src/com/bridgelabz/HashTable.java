@@ -9,9 +9,9 @@ public class HashTable <K,V> {
      */
     int bucketSize;
     List<HashLinkedList<K, V>> bucketArray = new ArrayList<>(bucketSize);
-     /*
-        Array List size increases at run-time, so it is called dynamic array
-     */
+    /*
+       Array List size increases at run-time, so it is called dynamic array
+    */
     public HashTable() {
 
     }
@@ -68,9 +68,9 @@ public class HashTable <K,V> {
         }else
             return null;
     }
-/*
-To print array list
- */
+    /*
+    To print array list
+     */
     @Override
     public String toString() {
         return "HashTable{" +
